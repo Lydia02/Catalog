@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 
 import categoryRoutes from './routes/categoryRoutes.js';
+import productRoutes from './routes/productRoutes.js';
 import errorHandler from './middleware/errorHandler.js';
 
 const app = express();
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/categories', categoryRoutes);
+app.use('/api/products', productRoutes);
 
 // Handle 404 - Route Not Found
 app.use((req, res, next) => {
