@@ -1,6 +1,6 @@
 # Product Catalog API
 
-A RESTful API for managing products and categories in an e-commerce-style catalog. Built with **Node.js**, **Express**, and **MongoDB**, the API supports CRUD operations, product variants, inventory tracking, search, filtering, and reporting — all documented with **Swagger**.
+A RESTful API for managing products and categories in an e-commerce-style catalog. Built with **Node.js**, **Express**, and **MongoDB**, the API supports CRUD operations, product variants, inventory tracking, search, filtering, and reporting all documented with **Swagger**.
 
 ---
 
@@ -40,7 +40,7 @@ A RESTful API for managing products and categories in an e-commerce-style catalo
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/product-catalog-api.git
+git clone https://github.com/Lydia02/Catalog.git
 cd product-catalog-api
 ````
 
@@ -227,7 +227,7 @@ Demonstrates:
 ## 🧑‍🎓 Author
 
 **Lydia Ojoawo**
-Backend Development : African Leadership University
 
-```
+Backend Development 
 
+African Leadership University
