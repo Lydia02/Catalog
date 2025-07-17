@@ -1,39 +1,38 @@
-# 🛍️ Product Catalog API
+# Product Catalog API
 
 A RESTful API for managing products and categories in an e-commerce-style catalog. Built with **Node.js**, **Express**, and **MongoDB**, the API supports CRUD operations, product variants, inventory tracking, search, filtering, and reporting — all documented with **Swagger**.
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
-- [Features](#-features)
+- [Features](#features)
 - [Getting Started](#-getting-started)
-- [API Documentation](#-api-documentation)
-- [Sample Endpoints](#-sample-endpoints)
-- [Filtering & Search](#-filtering--search)
-- [Reports](#-reports)
-- [Validation & Error Handling](#-validation--error-handling)
-- [Example Product Schema](#-example-product-schema)
-- [Project Structure](#-project-structure)
-- [Video Walkthrough](#-video-walkthrough)
-- [Assumptions / Notes](#-assumptions--notes)
+- [API Documentation](#api-documentation)
+- [Sample Endpoints](#sample-endpoints)
+- [Filtering & Search](#filtering--search)
+- [Reports](#reports)
+- [Validation & Error Handling](#validation--error-handling)
+- [Example Product Schema](#example-product-schema)
+- [Project Structure](#project-structure)
+- [Video Walkthrough](#video-walkthrough)
+- [Assumptions / Notes](#assumptions--notes)
 - [Tech Stack](#-tech-stack)
-- [Status](#-status)
 - [Author](#-author)
 
 ---
 
-## 📦 Features
+##  Features
 
-- ✅ Full CRUD for **products** and **categories**
-- 🎨 Support for **product variants** (size, color, SKU, price, stock)
-- 📊 Inventory tracking per variant
-- 🔍 Search & filtering by name, category, price, stock, and date
-- 💸 Pricing & discount support
-- ⚠️ Error handling, input validation, and sanitization
-- 📑 API documentation with Swagger UI
-- 📉 Reporting: low-stock alerts and product/category summary
-- 🌐 Connected to **MongoDB Atlas**
+-  Full CRUD for **products** and **categories**
+-  Support for **product variants** (size, color, SKU, price, stock)
+- Inventory tracking per variant
+- Search & filtering by name, category, price, stock, and date
+- Pricing & discount support
+- Error handling, input validation, and sanitization
+- API documentation with Swagger UI
+- Reporting: low-stock alerts and product/category summary
+- Connected to **MongoDB Atlas**
 
 ---
 
@@ -69,7 +68,7 @@ npm run dev
 
 ---
 
-## 📘 API Documentation
+## API Documentation
 
 Visit:
 📎 [http://localhost:5000/api-docs](http://localhost:5000/api-docs)
@@ -82,7 +81,7 @@ Interactive Swagger UI including:
 
 ---
 
-## 🧪 Sample Endpoints
+##  Sample Endpoints
 
 ### 📁 Categories
 
@@ -94,7 +93,7 @@ Interactive Swagger UI including:
 | PUT    | `/api/categories/:id` | Update a category   |
 | DELETE | `/api/categories/:id` | Delete a category   |
 
-### 📦 Products
+### Products
 
 | Method | Endpoint            | Description                  |
 | ------ | ------------------- | ---------------------------- |
@@ -107,7 +106,7 @@ Interactive Swagger UI including:
 
 ---
 
-## 🔍 Filtering & Search
+## Filtering & Search
 
 Supports advanced combinations like:
 
@@ -125,7 +124,7 @@ You can filter by:
 
 ---
 
-## 📊 Reports
+## Reports
 
 | Endpoint                 | Description                    |
 | ------------------------ | ------------------------------ |
@@ -134,7 +133,7 @@ You can filter by:
 
 ---
 
-## 🔒 Validation & Error Handling
+## Validation & Error Handling
 
 * Input validation with `express-validator`
 * Centralized error handling middleware
@@ -152,7 +151,7 @@ Example error response:
 
 ---
 
-## 🧾 Example Product Schema
+## Example Product Schema
 
 ```json
 {
@@ -174,7 +173,7 @@ Example error response:
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 product-catalog-api/
@@ -192,9 +191,9 @@ product-catalog-api/
 
 ---
 
-## 📽️ Video Walkthrough
+## Video Walkthrough
 
-🎥 See `video.mp4` in the project root
+ See `video.mp4` in the project root
 Demonstrates:
 
 * CRUD for products and categories
@@ -205,12 +204,11 @@ Demonstrates:
 
 ---
 
-## 📌 Assumptions / Notes
+## Assumptions / Notes
 
 * Product discounts are stored numerically (e.g. `10` for 10%)
 * Variants are managed per product via embedded documents
 * MongoDB Atlas handles persistence
-* No auth (out of scope for this project)
 
 ---
 
@@ -224,17 +222,12 @@ Demonstrates:
 
 ---
 
-## ✅ Status
 
-> **Completed:** All required and bonus features implemented
-> Ready for review & grading ✅
-
----
 
 ## 🧑‍🎓 Author
 
 **Lydia Ojoawo**
-Backend Development – African Leadership University
+Backend Development : African Leadership University
 
 ```
 
