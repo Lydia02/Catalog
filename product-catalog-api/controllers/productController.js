@@ -1,4 +1,5 @@
 import Product from '../models/product.js';
+import Category from '../models/Category.js';
 import {
   buildSearchFilter,
   getPagination,
@@ -10,6 +11,13 @@ import {
 export const createProduct = async (req, res, next) => {
   try {
     const { name, description, category, price, discount, variants } = req.body;
+
+    // Check if the category exists
+    const categoryExists = await Category.findById(category);
+    if (!categoryExists) {
+      res.status(400);
+      return next(createError('Category does not exist or has been deleted'));
+    }
 
     const productExists = await Product.findOne({ name });
     if (productExists) {
@@ -113,33 +121,32 @@ export const updateProduct = async (req, res, next) => {
 };
 
 export const patchProduct = async (req, res, next) => {
-    try {
-      const id = req.params.id;
-      if (!isValidObjectId(id)) {
-        res.status(400);
-        return next(createError('Invalid Product ID'));
-      }
-  
-      const product = await Product.findById(id);
-      if (!product) {
-        res.status(404);
-        return next(createError('Product not found'));
-      }
-  
-      const updatableFields = ['name', 'description', 'category', 'price', 'discount', 'variants'];
-      updatableFields.forEach((field) => {
-        if (req.body[field] !== undefined) {
-          product[field] = req.body[field];
-        }
-      });
-  
-      const updated = await product.save();
-      res.status(200).json(updated);
-    } catch (error) {
-      next(error);
+  try {
+    const id = req.params.id;
+    if (!isValidObjectId(id)) {
+      res.status(400);
+      return next(createError('Invalid Product ID'));
     }
-  };
-  
+
+    const product = await Product.findById(id);
+    if (!product) {
+      res.status(404);
+      return next(createError('Product not found'));
+    }
+
+    const updatableFields = ['name', 'description', 'category', 'price', 'discount', 'variants'];
+    updatableFields.forEach((field) => {
+      if (req.body[field] !== undefined) {
+        product[field] = req.body[field];
+      }
+    });
+
+    const updated = await product.save();
+    res.status(200).json(updated);
+  } catch (error) {
+    next(error);
+  }
+};
 
 // @route   DELETE /api/products/:id
 export const deleteProduct = async (req, res, next) => {
