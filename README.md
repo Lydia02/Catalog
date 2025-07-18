@@ -87,6 +87,8 @@ Interactive Swagger UI including:
 
 ##  Sample Endpoints
 
+**Route : http://localhost:5000**
+
 ### 📁 Categories
 
 | Method | Endpoint              | Description         |
@@ -307,6 +309,81 @@ Example error response:
 ```
 
 ---
+
+##  **Low-Stock Report**
+
+###  **GET /api/reports/low-stock**
+
+###  Query Parameters:
+
+| Param       | Type    | Description                                                            |
+| ----------- | ------- | ---------------------------------------------------------------------- |
+| `threshold` | Integer | Optional. Returns variants with stock below this number. Default: `10` |
+
+---
+
+###  Example Request:
+
+```http
+GET /api/reports/low-stock?threshold=20
+```
+
+---
+
+###  Example Response:
+
+```json
+[
+  {
+    "_id": "6876ebf6b904a6924c78b8ee",
+    "name": "Bluetooth Headphones",
+    "variant": {
+      "color": "Black",
+      "sku": "BTH-BLK-001",
+      "stock": 15
+    }
+  },
+  {
+    "_id": "6876f111b904a6924c78b8f8",
+    "name": "Gaming Mouse",
+    "variant": {
+      "color": "Red",
+      "sku": "GMSE-RD-002",
+      "stock": 5
+    }
+  }
+]
+```
+This report helps you monitor **which products need restocking**.
+
+---
+
+## **Summary Report**
+
+### **GET /api/reports/summary**
+
+---
+
+###  Example Request:
+
+```http
+GET /api/reports/summary
+```
+
+---
+
+### Example Response:
+
+```json
+{
+  "totalProducts": 25,
+  "totalCategories": 11,
+}
+
+```
+
+---
+
 
 ## Project Structure
 
