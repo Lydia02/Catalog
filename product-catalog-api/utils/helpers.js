@@ -29,9 +29,10 @@ export const buildSearchFilter = (query, searchableFields = []) => {
 };
 
 export const getPagination = (query) => {
+  // Parse pagination parameters with defaults
   const page = Math.max(1, parseInt(query.page)) || 1;
   const limit = Math.max(1, parseInt(query.limit)) || 10;
-  const skip = (page - 1) * limit;
+  const skip = (page - 1) * limit; // Calculate offset
 
-  return { page, limit, skip };
+  return { page, limit, skip }; // Return pagination details
 };
