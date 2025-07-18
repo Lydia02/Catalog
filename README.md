@@ -22,6 +22,10 @@ A RESTful API for managing products and categories in an e-commerce-style catalo
 
 ---
 
+Watch the full demo on YouTube:
+https://youtu.be/ZVTMngtYzyA?si=VUQ4sQRu44C_5Cwd
+
+
 ##  Features
 
 -  Full CRUD for **products** and **categories**
@@ -192,16 +196,20 @@ product-catalog-api/
 ---
 
 ## Video Walkthrough
+Watch the full demo on YouTube:
+https://youtu.be/ZVTMngtYzyA?si=VUQ4sQRu44C_5Cwd
 
- See `video.mp4` in the project root
-Demonstrates:
+This video demonstrates:
 
-* CRUD for products and categories
-* Filtering & multi-criteria search
-* Product variants & stock tracking
-* Validation errors
-* Swagger documentation
+CRUD operations for products and categories
 
+Filtering and multi-criteria search
+
+Product variants and inventory tracking
+
+Input validation and error handling
+
+Interactive Swagger API documentation
 ---
 
 ## Assumptions / Notes
