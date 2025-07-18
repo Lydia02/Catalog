@@ -23,7 +23,7 @@ A RESTful API for managing products and categories in an e-commerce-style catalo
 ---
 
 Watch the full demo on YouTube:
-https://youtu.be/ZVTMngtYzyA?si=VUQ4sQRu44C_5Cwd
+https://youtu.be/CHlVvEfLjNg?si=MER8bSrZBJVvFfsy
 
 
 ##  Features
@@ -197,7 +197,7 @@ product-catalog-api/
 
 ## Video Walkthrough
 Watch the full demo on YouTube:
-https://youtu.be/ZVTMngtYzyA?si=VUQ4sQRu44C_5Cwd
+https://youtu.be/CHlVvEfLjNg?si=MER8bSrZBJVvFfsy
 
 This video demonstrates:
 
