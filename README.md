@@ -155,7 +155,59 @@ Example error response:
 
 ---
 
+## Example Category Schema
+
+###  Request Body (`POST /api/categories`)
+
+```json
+{
+  "name": "Electronics",
+  "description": "Devices, gadgets, and tech accessories"
+}
+```
+
+---
+
+### Example Response (`201 Created`)
+
+```json
+{
+  "_id": "6876d7230601c35a59011a70",
+  "name": "Electronics",
+  "description": "Devices, gadgets, and tech accessories",
+  "createdAt": "2025-07-15T22:33:07.090Z",
+  "updatedAt": "2025-07-15T22:33:07.090Z",
+  "__v": 0
+}
+```
+
+---
+
+## GET All Categories Response
+
+```json
+[
+  {
+    "_id": "6876d7230601c35a59011a70",
+    "name": "Electronics",
+    "description": "Devices, gadgets, and tech accessories",
+    "createdAt": "2025-07-15T22:33:07.090Z",
+    "updatedAt": "2025-07-15T22:33:07.090Z"
+  },
+  {
+    "_id": "6876d7400601c35a59011a73",
+    "name": "Clothing",
+    "description": "Apparel for men, women, and children",
+    "createdAt": "2025-07-15T22:33:36.913Z",
+    "updatedAt": "2025-07-15T22:33:36.913Z"
+  }
+]
+```
+---
+
 ## Example Product Schema
+
+### **POST /api/products** – Request Body
 
 ```json
 {
@@ -170,6 +222,85 @@ Example error response:
       "sku": "BTH-BLK-001",
       "price": 59.99,
       "stock": 25
+    },
+    {
+      "color": "White",
+      "sku": "BTH-WHT-001",
+      "price": 59.99,
+      "stock": 30
+    }
+  ]
+}
+```
+
+---
+
+###  **201 Created** – Response
+
+```json
+{
+  "_id": "6876ebf6b904a6924c78b8ee",
+  "name": "Bluetooth Headphones",
+  "description": "Noise-cancelling over-ear headphones",
+  "category": "6876d7230601c35a59011a70",
+  "price": 59.99,
+  "discount": 10,
+  "variants": [
+    {
+      "color": "Black",
+      "sku": "BTH-BLK-001",
+      "price": 59.99,
+      "stock": 25
+    },
+    {
+      "color": "White",
+      "sku": "BTH-WHT-001",
+      "price": 59.99,
+      "stock": 30
+    }
+  ],
+  "createdAt": "2025-07-16T00:01:58.355Z",
+  "updatedAt": "2025-07-16T00:01:58.355Z",
+  "__v": 0
+}
+```
+
+---
+
+###  **GET /api/products** – Example Response (Paginated)
+
+```json
+{
+  "page": 1,
+  "total": 1,
+  "results": [
+    {
+      "_id": "6876ebf6b904a6924c78b8ee",
+      "name": "Bluetooth Headphones",
+      "description": "Noise-cancelling over-ear headphones",
+      "category": {
+        "_id": "6876d7230601c35a59011a70",
+        "name": "Electronics"
+      },
+      "price": 59.99,
+      "discount": 10,
+      "variants": [
+        {
+          "color": "Black",
+          "sku": "BTH-BLK-001",
+          "price": 59.99,
+          "stock": 25
+        },
+        {
+          "color": "White",
+          "sku": "BTH-WHT-001",
+          "price": 59.99,
+          "stock": 30
+        }
+      ],
+      "createdAt": "2025-07-16T00:01:58.355Z",
+      "updatedAt": "2025-07-16T00:01:58.355Z",
+      "__v": 0
     }
   ]
 }
